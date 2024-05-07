@@ -39,8 +39,8 @@
 
 .search button {
   background-color: #b73c36;
+  border: 2px solid #b73c36;
   color: white;
-  border: none;
   border-radius: 6px;
   padding: 4px 16px;
   cursor: pointer;
