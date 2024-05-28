@@ -9,7 +9,7 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2c3e50;
+  background-color: #AFC8AD;
   padding: 10px 20px;
 }
 
@@ -37,7 +37,7 @@ ul, li {
 }
 
 .nav-item:hover {
-  color: #3498db;
+  color: #b73c36;
 }
 
 .nav-item::after {
@@ -48,7 +48,7 @@ ul, li {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #3498db;
+  background-color: #7ab93f;
   transition: width 0.3s ease;
 }
 
@@ -57,7 +57,7 @@ ul, li {
 }
 
 .active {
-  color: #3498db;
+  color: #7ab93f;
 }
 
 .search {
@@ -75,12 +75,12 @@ ul, li {
 }
 
 .search input:focus {
-  border-color: #3498db;
+  border-color: #7ab93f;
 }
 
 .btn {
   padding: 8px 16px;
-  background-color: #3498db;
+  background-color: #b73c36;
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -89,7 +89,7 @@ ul, li {
 }
 
 .btn:hover {
-  background-color: #2980b9;
+  background-color: #7ab93f;
 }
 
 .nav-signup-basket {
