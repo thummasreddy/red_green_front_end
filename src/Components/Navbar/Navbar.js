@@ -5,7 +5,7 @@ import basket from '../Assets/Icons/basket.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState("shop"); // Using more descriptive state name
+  const [activeMenu, setActiveMenu] = useState("shop");
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
@@ -17,10 +17,30 @@ const Navbar = () => {
         <img src={logo} alt="Logo"/>
       </div>
       <ul className="nav-menu">
-        <li onClick={() => handleMenuClick("home")}><Link to='/'> Home</Link>{activeMenu === "home" && <hr/>}</li>
-        <li onClick={() => handleMenuClick("shop")}><Link to='/shop'> Shop</Link>{activeMenu === "shop" && <hr/>}</li>
-        <li onClick={() => handleMenuClick("vegetables")}><Link to='/vegetables'> Vegetables</Link>{activeMenu === "vegetables" && <hr/>}</li>
-        <li onClick={() => handleMenuClick("fruits")}><Link to='/fruits'> Fruits</Link>{activeMenu === "fruits" && <hr/>}</li>
+        <li 
+          className={`nav-item ${activeMenu === "home" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("home")}
+        >
+          <Link to='/'>Home</Link>
+        </li>
+        <li 
+          className={`nav-item ${activeMenu === "shop" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("shop")}
+        >
+          <Link to='/shop'>Shop</Link>
+        </li>
+        <li 
+          className={`nav-item ${activeMenu === "vegetables" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("vegetables")}
+        >
+          <Link to='/vegetables'>Vegetables</Link>
+        </li>
+        <li 
+          className={`nav-item ${activeMenu === "fruits" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("fruits")}
+        >
+          <Link to='/fruits'>Fruits</Link>
+        </li>
       </ul>
 
       <div className="search">
@@ -29,8 +49,8 @@ const Navbar = () => {
       </div>
 
       <div className="nav-signup-basket">
-        <Link to='/signup'><button>SignUp</button></Link> 
-        <Link to='/cart'><img src={basket} alt="Basket"/></Link>
+        <Link to='/signup'><button className="btn">Sign Up</button></Link> 
+        <Link to='/cart'><img src={basket} alt="Basket" className="basket-icon"/></Link>
         <div className="nav-basket-count">0</div>
       </div>
     </div>
