@@ -56,14 +56,15 @@
   width: 75px;
   height: 25px;
   outline: none;
-  border: 1px solid #7ab93f;
+  background-color: #b73c36;
+  border: 2px solid #b73c36;
   border-radius: 75px;
-  color: black;
-  background-color: white;
+  color: white;
   cursor: pointer;
 }
-.nav-signup-basket button:active{
-  background: #7ab93f;
+.nav-signup-basket button:hover {
+  background-color: #7ab93f;
+  border: 2px solid #7ab93f;
 }
 
 .nav-basket-count{
