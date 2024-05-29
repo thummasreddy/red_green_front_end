@@ -6,9 +6,15 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("shop");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
+    setIsMobileMenuOpen(false); // Close mobile menu on item click
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -16,7 +22,7 @@ const Navbar = () => {
       <div className='nav-logo'>
         <img src={logo} alt="Logo"/>
       </div>
-      <ul className="nav-menu">
+      <ul className={`nav-menu ${isMobileMenuOpen ? 'mobile-menu' : ''}`}>
         <li 
           className={`nav-item ${activeMenu === "home" ? "active" : ""}`} 
           onClick={() => handleMenuClick("home")}
@@ -53,6 +59,12 @@ const Navbar = () => {
         <Link to='/cart'><img src={basket} alt="Basket" className="basket-icon"/></Link>
         <div className="nav-basket-count">0</div>
       </div>
+
+      <button className="hamburger" onClick={toggleMobileMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </button>
     </div>
   );
 }
