@@ -1,58 +1,67 @@
+/* Home.css */
+
+/* Style for the entire home container */
 .home {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #EDF7E3;
 }
 
-.home-left {
-  flex: 1;
-  padding-right: 20px;
+/* Style for the landing page image */
+img {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 20px;
+  
 }
 
-.home-left h3 {
+/* Style for the text content */
+div > h3 {
   font-size: 24px;
-  color: #333;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.home-left h2 {
-  font-size: 36px;
-  color: #007bff;
+div > h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.home-right {
-  flex: 1;
-  padding-left: 20px;
-}
-
-.hand-hand-icon {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.hand-hand-icon p {
+div > p {
   font-size: 16px;
-  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.home-right h4 {
-  font-size: 20px;
-  color: #007bff;
+/* Style for the "Shop Now" button */
+.shop-now-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the footer */
+.home-footer {
+  text-align: center;
   margin-top: 20px;
 }
 
-.home-image {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.home-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.home-footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
