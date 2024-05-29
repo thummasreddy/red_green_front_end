@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("shop");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
@@ -16,10 +15,6 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -36,28 +31,9 @@ const Navbar = () => {
         </li>
         <li 
           className={`nav-item ${activeMenu === "shop" ? "active" : ""}`} 
-          onClick={toggleDropdown}
+          onClick={() => handleMenuClick("shop")}
         >
-          Shop by Category
-          {isDropdownOpen && (
-            <ul className="dropdown-menu">
-              <li onClick={() => handleMenuClick("category1")}>
-                <Link to='/category1'>Category 1</Link>
-              </li>
-              <li onClick={() => handleMenuClick("category2")}>
-                <Link to='/category2'>Category 2</Link>
-              </li>
-              <li onClick={() => handleMenuClick("category3")}>
-                <Link to='/category3'>Category 3</Link>
-              </li>
-              <li onClick={() => handleMenuClick("category4")}>
-                <Link to='/category4'>Category 4</Link>
-              </li>
-              <li onClick={() => handleMenuClick("category5")}>
-                <Link to='/category5'>Category 5</Link>
-              </li>
-            </ul>
-          )}
+          <Link to='/shop'>Shop</Link>
         </li>
         <li 
           className={`nav-item ${activeMenu === "vegetables" ? "active" : ""}`} 
