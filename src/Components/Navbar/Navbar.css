@@ -82,17 +82,19 @@ ul, li {
 }
 
 .btn {
-  padding: 8px 16px;
-  background-color: #e74c3c;
-  border: none;
+  padding: 8px 12px; /* Match padding with search input */
   border-radius: 4px;
-  color: #fff;
+  border: 1px solid #bdc3c7; /* Match border with search input */
+  background-color: #fff; /* White background like search input */
+  color: #000; /* Change text color to black to match search input */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add transitions */
 }
 
 .btn:hover {
   background-color: #7ab93f;
+  border-color: #7ab93f;
+  color: #fff; /* Change text color to white on hover */
 }
 
 .nav-signup-basket {
@@ -107,10 +109,18 @@ ul, li {
 
 .nav-basket-count {
   color: #ecf0f1;
-  font-size: 14px;
+  font-size: 8px;
   background-color: #e74c3c;
   border-radius: 50%;
-  padding: 5px 10px;
+  padding: 5px;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  width: 15px; /* Ensure the width and height are equal to make it a circle */
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Styles for mobile view */
