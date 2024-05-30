@@ -12,11 +12,14 @@
 
 /* Style for the landing page image */
 img {
-  max-width: 60%;
+  max-width: 50%;
   height: auto;
-  margin-bottom: 20px;
-  
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 700px;
+
 }
+
 
 /* Style for the text content */
 div > h3 {
@@ -39,8 +42,8 @@ div > p {
 
 /* Style for the "Shop Now" button */
 .shop-now-btn {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #ffbda7;
+  color: black;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 20px;
@@ -51,7 +54,8 @@ div > p {
 }
 
 .shop-now-btn:hover {
-  background-color: #0056b3;
+  background-color: #7ab93f;
+  color: white;
 }
 
 /* Style for the footer */
