@@ -46,22 +46,21 @@ const Navbar = () => {
         >
           <Link to='/blog'>Blog</Link>
         </li>
-
         <li 
           className={`nav-item ${activeMenu === "contact" ? "active" : ""}`} 
           onClick={() => handleMenuClick("contact")}
         >
           <Link to='/contact'>Contact</Link>
         </li>
-
-        </ul>
+      </ul>
 
       <div className="search">
         <input type="text" placeholder="Search for products"/>
         <button className="btn btn-primary" type="button">Search</button>
+        <button className="btn btn-login" type="button">Login</button> {/* Login button */}
       </div>
       
-        <button className="hamburger" onClick={toggleMobileMenu}>
+      <button className="hamburger" onClick={toggleMobileMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
