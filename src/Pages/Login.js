@@ -4,7 +4,7 @@ import '../Components/Styles/Login.css';
 const Login = () => {
   const [isSignup, setIsSignup] = useState(false);
 
-  const toggleSignup = () => {
+  const toggleMode = () => {
     setIsSignup(!isSignup);
   };
 
@@ -14,20 +14,44 @@ const Login = () => {
         <div className="login-left">
           <h1>{isSignup ? 'Sign Up' : 'Sign In'}</h1>
           <form>
+            {isSignup && (
+              <div className="form-group-row">
+                <div className="form-group">
+                  <label htmlFor="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="First Name" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
+                </div>
+              </div>
+            )}
             <div className="form-group">
               <label htmlFor="username">{isSignup ? 'Username' : 'Username'}</label>
               <input type="text" id="username" name="username" placeholder="Username" />
             </div>
             {isSignup && (
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" />
-              </div>
+              <>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Email" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Phone Number" />
+                </div>
+              </>
             )}
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <input type="password" id="password" name="password" placeholder="Password" />
             </div>
+            {isSignup && (
+              <div className="form-group">
+                <label htmlFor="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
+              </div>
+            )}
             <button type="submit" className="login-btn">{isSignup ? 'Sign Up' : 'Sign In'}</button>
             {!isSignup && (
               <div className="remember-forgot">
@@ -40,9 +64,11 @@ const Login = () => {
           </form>
         </div>
         <div className="login-right">
-          <h2>Welcome to {isSignup ? 'Sign Up' : 'Sign In'}</h2>
+          <h2>Welcome {isSignup ? 'to Sign Up' : 'back'}</h2>
           <p>{isSignup ? 'Already have an account?' : "Don't have an account?"}</p>
-          <button className="signup-btn" onClick={toggleSignup}>{isSignup ? 'Sign In' : 'Sign Up'}</button>
+          <button className="signup-btn" onClick={toggleMode}>
+            {isSignup ? 'Sign In' : 'Sign Up'}
+          </button>
         </div>
       </div>
     </div>
