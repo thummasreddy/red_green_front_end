@@ -110,8 +110,8 @@ ul, li {
 
 .btn-primary,
 .btn-login {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
+  --b: 2px;   /* border thickness */
+  --s: .35em; /* size of the corner */
   --color: #373B44;
   
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
