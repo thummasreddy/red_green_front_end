@@ -12,18 +12,31 @@ ul, li {
   align-items: center;
   justify-content: space-between;
   background-color: #AFC8AD;
-  padding: 10px 20px;
+  padding: 10px 100px;
   position: relative;
 }
 
 .nav-logo img {
-  width: 100px;
+  width: 15%;
 }
 
 .nav-menu {
   display: flex;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -36,7 +49,7 @@ ul, li {
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
-  margin: 0 10px; /* Adjust spacing between items */
+  margin: 15px 15px 0; /* Adjust spacing between items and top margin */
 }
 
 .nav-item a {
@@ -52,10 +65,9 @@ ul, li {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -5px;
   transform: translateX(-50%);
   width: 0;
-  height: 2px;
+ 
   background-color: #7ab93f;
   transition: width 0.3s ease;
 }
@@ -70,10 +82,11 @@ ul, li {
 }
 
 
+
 .search {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
 }
 
 .search input {

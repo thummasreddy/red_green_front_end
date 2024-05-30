@@ -54,15 +54,13 @@ const Navbar = () => {
           <Link to='/contact'>Contact</Link>
         </li>
 
-        <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-
-      </ul>
+        </ul>
 
       <div className="search">
         <input type="text" placeholder="Search for products"/>
         <button className="btn btn-primary" type="button">Search</button>
       </div>
-
+      
         <button className="hamburger" onClick={toggleMobileMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
