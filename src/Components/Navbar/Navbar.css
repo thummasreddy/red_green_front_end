@@ -22,7 +22,11 @@ ul, li {
 
 .nav-menu {
   display: flex;
-  gap: 20px;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
@@ -32,6 +36,7 @@ ul, li {
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
+  margin: 0 10px; /* Adjust spacing between items */
 }
 
 .nav-item a {
@@ -55,13 +60,15 @@ ul, li {
   transition: width 0.3s ease;
 }
 
-.nav-item.active::after, .nav-item:hover::after {
+.nav-item.active::after,
+.nav-item:hover::after {
   width: 50%;
 }
 
 .active {
   color: #7ab93f;
 }
+
 
 .search {
   display: flex;
@@ -149,20 +156,29 @@ ul, li {
   .nav-menu {
     position: absolute;
     top: 60px;
-    right: 0;
+    left: 00; /* Align to the left */
     background-color: #AFC8AD;
     flex-direction: column;
-    width: 200px;
-    transform: translateX(100%);
+    width: 100%; /* Full width */
+    transform: translateX(-100%); /* Hide initially */
     transition: transform 0.3s ease;
   }
 
   .nav-menu.mobile-menu {
-    transform: translateX(0);
+    transform: translateX(0); /* Move to the visible position */
   }
 
   .search {
-    display: none;
+    display: flex;
+    margin-bottom: 1rem; /* Add space between search and menu items */
+  }
+
+  .nav-menu .search input {
+    width: 70%; /* Adjust width of input */
+  }
+
+  .nav-menu .btn {
+    width: 30%; /* Adjust width of button */
   }
 
   .hamburger {

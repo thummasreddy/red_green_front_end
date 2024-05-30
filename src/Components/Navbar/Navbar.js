@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../Assets/r_g_logo_01.png';
-import basket from '../Assets/Icons/basket.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -36,17 +35,27 @@ const Navbar = () => {
           <Link to='/shop'>Shop</Link>
         </li>
         <li 
-          className={`nav-item ${activeMenu === "vegetables" ? "active" : ""}`} 
-          onClick={() => handleMenuClick("vegetables")}
+          className={`nav-item ${activeMenu === "about" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("about")}
         >
-          <Link to='/vegetables'>Vegetables</Link>
+          <Link to='/about'>About</Link>
         </li>
         <li 
-          className={`nav-item ${activeMenu === "fruits" ? "active" : ""}`} 
-          onClick={() => handleMenuClick("fruits")}
+          className={`nav-item ${activeMenu === "blog" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("blog")}
         >
-          <Link to='/fruits'>Fruits</Link>
+          <Link to='/blog'>Blog</Link>
         </li>
+
+        <li 
+          className={`nav-item ${activeMenu === "contact" ? "active" : ""}`} 
+          onClick={() => handleMenuClick("contact")}
+        >
+          <Link to='/contact'>Contact</Link>
+        </li>
+
+        <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+
       </ul>
 
       <div className="search">
@@ -54,13 +63,7 @@ const Navbar = () => {
         <button className="btn btn-primary" type="button">Search</button>
       </div>
 
-      <div className="nav-signup-basket">
-        <Link to='/signup'><button className="btn">Sign Up</button></Link> 
-        <Link to='/cart'><img src={basket} alt="Basket" className="basket-icon"/></Link>
-        <div className="nav-basket-count">0</div>
-      </div>
-
-      <button className="hamburger" onClick={toggleMobileMenu}>
+        <button className="hamburger" onClick={toggleMobileMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
