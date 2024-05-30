@@ -1,22 +1,27 @@
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Components/Hero/Home';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './Components/Navbar/Layout';
+import Home from './Components/Home/Home';
+import Shop from './Pages/Shop';
+import About from './Pages/About';
+import Blog from './Pages/Blog';
+import Contact from './Pages/Contact';
 import Login from './Pages/Login';
-import Cart from './Pages/Cart';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Router>
-        <Navbar />
+    <Router>
+      <Layout>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
-      </Router>
-    </div>
+      </Layout>
+    </Router>
   );
 }
 
