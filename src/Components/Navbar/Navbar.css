@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 /* Reset some basic elements */
 ul, li {
   margin: 0;
@@ -81,8 +79,6 @@ ul, li {
   color: #7ab93f;
 }
 
-
-
 .search {
   display: flex;
   align-items: center;
@@ -101,6 +97,7 @@ ul, li {
 .search input:focus {
   border-color: #7ab93f;
 }
+
 .search {
   display: flex;
   align-items: center;
@@ -148,8 +145,6 @@ ul, li {
   color: #fff;
 }
 
-
-
 /* Styles for mobile view */
 .hamburger {
   display: none;
@@ -176,7 +171,7 @@ ul, li {
   .nav-menu {
     position: absolute;
     top: 60px;
-    left: 00; /* Align to the left */
+    left: 0; /* Align to the left */
     background-color: #AFC8AD;
     flex-direction: column;
     width: 100%; /* Full width */
