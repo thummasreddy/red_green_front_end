@@ -22,6 +22,7 @@ ul, li {
 
 .nav-menu {
   display: flex;
+  top: 0.7pc;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
   list-style: none;
@@ -31,8 +32,7 @@ ul, li {
 
 .nav-menu {
   position: absolute;
-  top: 0;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
@@ -87,6 +87,7 @@ ul, li {
   display: flex;
   align-items: center;
   gap: 2px;
+  margin-right: 100px; /* Adjust the margin to move the search bar left */
 }
 
 .search input {
@@ -109,6 +110,7 @@ ul, li {
   color: #000; /* Change text color to black to match search input */
   cursor: pointer;
   transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add transitions */
+  margin-right: 10px; /* Adjust the margin to move the button left */
 }
 
 .btn:hover {
@@ -117,31 +119,7 @@ ul, li {
   color: #fff; /* Change text color to white on hover */
 }
 
-.nav-signup-basket {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
 
-.basket-icon {
-  width: 30px;
-}
-
-.nav-basket-count {
-  color: #ecf0f1;
-  font-size: 8px;
-  background-color: #e74c3c;
-  border-radius: 50%;
-  padding: 5px;
-  position: absolute;
-  top: 12px;
-  right: 8px;
-  width: 15px; /* Ensure the width and height are equal to make it a circle */
-  height: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* Styles for mobile view */
 .hamburger {
