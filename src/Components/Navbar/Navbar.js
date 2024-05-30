@@ -57,7 +57,9 @@ const Navbar = () => {
       <div className="search">
         <input type="text" placeholder="Search for products"/>
         <button className="btn btn-primary" type="button">Search</button>
-        <button className="btn btn-login" type="button">Login</button> {/* Login button */}
+        <Link to="/login"> {/* Navigate to Login page */}
+          <button className="btn btn-login" type="button">Login</button> {/* Login button */}
+        </Link>
       </div>
       
       <button className="hamburger" onClick={toggleMobileMenu}>
