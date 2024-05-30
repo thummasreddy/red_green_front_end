@@ -1,20 +1,33 @@
-/* Login.css */
+/* General reset for the login component only */
+.login-container, .login-box, .login-left, .login-right, .form-group, label, input, button, .remember-forgot, .signup-btn {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body and other elements are not globally styled here */
 .login-container {
+  font-family: Arial, sans-serif;
+  background-color: #AFC8AD;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100vh;
-  background-color: #EDF7E3; /* Ensure this doesn't interfere with other components */
+  width: 100%;
 }
 
+/* Style specifically for the login container */
 .login-box {
   display: flex;
   width: 800px;
   height: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: white;
+  border-radius: 10px;
 }
 
+/* Individual sections with transition */
 .login-left, .login-right {
   width: 50%;
   padding: 40px;
@@ -22,6 +35,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 0.6s;
 }
 
 .login-left {
@@ -46,6 +60,7 @@ p {
   margin-bottom: 20px;
 }
 
+/* Form group styling */
 .form-group {
   margin-bottom: 15px;
   width: 100%;
@@ -58,7 +73,8 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
@@ -68,10 +84,12 @@ input[type="password"] {
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="email"]:focus {
   border-color: #7ab93f;
 }
 
+/* Button styling */
 .login-btn {
   width: 100%;
   padding: 10px;
@@ -112,6 +130,7 @@ input[type="password"]:focus {
   color: #ff7e5f;
 }
 
+/* Signup button styling */
 .signup-btn {
   padding: 10px 20px;
   border: 1px solid white;
@@ -125,4 +144,13 @@ input[type="password"]:focus {
 
 .signup-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Transformation classes for the forms */
+.login-box.signup-mode .login-left {
+  transform: translateX(100%);
+}
+
+.login-box.signup-mode .login-right {
+  transform: translateX(-100%);
 }
