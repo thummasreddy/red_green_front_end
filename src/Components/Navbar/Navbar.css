@@ -78,16 +78,7 @@ ul, li {
   color: #7ab93f;
 }
 
-.navbar-search input:focus {
-  border-color: #7ab93f;
-}
 
-.navbar-search {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Increase the gap to add space between the search bar and buttons */
-  margin-right: 100px; /* Adjust the margin to move the search bar left */
-}
 
 .navbar-btn-primary,
 .navbar-btn-login {

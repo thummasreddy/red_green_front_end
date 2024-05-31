@@ -55,8 +55,7 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar-search">
-        <input type="text" placeholder="Search for products"/>
-        <button className="navbar-btn-primary" type="button">Search</button>
+       
         <Link to="/login"> {/* Navigate to Login page */}
           <button className="navbar-btn-login" type="button">Login</button> {/* Login button */}
         </Link>
