@@ -201,7 +201,7 @@ input[type="tel"]:active {
 .signup-btn {
   padding: 10px 20px;
   background: linear-gradient(135deg, #7ab93f, #feb47b);
-  border: 1px solid #ff7e5f;
+  border: 1px solid #feb47b;
   border-radius: 10px;
   
   color: white;

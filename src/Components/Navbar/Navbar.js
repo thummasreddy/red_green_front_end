@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../Assets/r_g_logo_01.png';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("shop");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
@@ -14,6 +17,10 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
   };
 
   return (
@@ -55,7 +62,20 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar-search">
-       
+        <form action="/search" method="get">
+          <label htmlFor="search" className="navbar-search-label">Search:</label>
+          <input 
+                  value={searchQuery}
+            onChange={handleSearchChange}
+            autoComplete="off"
+            className="navbar-search-input"
+          />
+          <button type="submit" className="navbar-search-btn">
+            <FontAwesomeIcon icon={faSearch} />
+          </button>
+          <ul id="suggestions" className="navbar-suggestions"></ul>
+        </form>
+        
         <Link to="/login"> {/* Navigate to Login page */}
           <button className="navbar-btn-login" type="button">Login</button> {/* Login button */}
         </Link>
