@@ -63,7 +63,7 @@ const Navbar = () => {
 
       <div className="navbar-search">
         <form action="/search" method="get">
-          <label htmlFor="search" className="navbar-search-label">Search:</label>
+          <label htmlFor="search" className="navbar-search-label"></label>
           <input 
                   value={searchQuery}
             onChange={handleSearchChange}
