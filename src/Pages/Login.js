@@ -58,7 +58,11 @@ const Login = () => {
                 <label>
                   <input type="checkbox" /> Remember Me
                 </label>
-                <a href="#">Forgot Password</a>
+                {/* JSX */}
+<a href="/forgot-password" className="forgot-password-link">
+  Forgot Password
+</a>
+
               </div>
             )}
           </form>

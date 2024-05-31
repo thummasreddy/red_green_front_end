@@ -18,54 +18,54 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <div className='nav-logo'>
+      <div className='navbar-logo'>
         <img src={logo} alt="Logo"/>
       </div>
-      <ul className={`nav-menu ${isMobileMenuOpen ? 'mobile-menu' : ''}`}>
+      <ul className={`navbar-menu ${isMobileMenuOpen ? 'navbar-mobile-menu' : ''}`}>
         <li 
-          className={`nav-item ${activeMenu === "home" ? "active" : ""}`} 
+          className={`navbar-item ${activeMenu === "home" ? "navbar-active" : ""}`} 
           onClick={() => handleMenuClick("home")}
         >
           <Link to='/'>Home</Link>
         </li>
         <li 
-          className={`nav-item ${activeMenu === "shop" ? "active" : ""}`} 
+          className={`navbar-item ${activeMenu === "shop" ? "navbar-active" : ""}`} 
           onClick={() => handleMenuClick("shop")}
         >
           <Link to='/shop'>Shop</Link>
         </li>
         <li 
-          className={`nav-item ${activeMenu === "about" ? "active" : ""}`} 
+          className={`navbar-item ${activeMenu === "about" ? "navbar-active" : ""}`} 
           onClick={() => handleMenuClick("about")}
         >
           <Link to='/about'>About</Link>
         </li>
         <li 
-          className={`nav-item ${activeMenu === "blog" ? "active" : ""}`} 
+          className={`navbar-item ${activeMenu === "blog" ? "navbar-active" : ""}`} 
           onClick={() => handleMenuClick("blog")}
         >
           <Link to='/blog'>Blog</Link>
         </li>
         <li 
-          className={`nav-item ${activeMenu === "contact" ? "active" : ""}`} 
+          className={`navbar-item ${activeMenu === "contact" ? "navbar-active" : ""}`} 
           onClick={() => handleMenuClick("contact")}
         >
           <Link to='/contact'>Contact</Link>
         </li>
       </ul>
 
-      <div className="search">
+      <div className="navbar-search">
         <input type="text" placeholder="Search for products"/>
-        <button className="btn btn-primary" type="button">Search</button>
+        <button className="navbar-btn-primary" type="button">Search</button>
         <Link to="/login"> {/* Navigate to Login page */}
-          <button className="btn btn-login" type="button">Login</button> {/* Login button */}
+          <button className="navbar-btn-login" type="button">Login</button> {/* Login button */}
         </Link>
       </div>
       
-      <button className="hamburger" onClick={toggleMobileMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+      <button className="navbar-hamburger" onClick={toggleMobileMenu}>
+        <div className="navbar-bar"></div>
+        <div className="navbar-bar"></div>
+        <div className="navbar-bar"></div>
       </button>
     </div>
   );
