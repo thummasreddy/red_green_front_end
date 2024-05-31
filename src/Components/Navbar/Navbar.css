@@ -8,6 +8,7 @@ ul, li {
 .navbar {
   display: flex;
   align-items: center;
+  position: fixed;
   justify-content: space-between;
   background-color: #BACD92;
   padding: 10px 100px;
