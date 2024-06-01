@@ -93,3 +93,33 @@
   font-style: italic;
   color: #D24545;
 }
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ff7e5f; /* Adjust the color to match your design */
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #666;
+}
