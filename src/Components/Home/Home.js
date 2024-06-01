@@ -1,8 +1,13 @@
 import React from 'react';
-import { FaTruck, FaLeaf, FaMedal, FaHeadset } from 'react-icons/fa';
+import { FaTruck, FaLeaf, FaMedal, FaHeadset, FaAppleAlt, FaCarrot, FaSeedling, FaUtensils } from 'react-icons/fa';
 import './Home.css'; // Import the CSS file
 import landingPageImage from '../Assets/Landing_Page.png'; // Import the image
 import landingPageBackground from '../Assets/Landing_Page_bg.png';
+import fruitsImg from '../Assets/fruits.jpg'; // Update with your actual image paths
+import juicesImg from '../Assets/juices.jpg';
+import driedImg from '../Assets/dried-fruits.jpg';
+import vegetablesImg from '../Assets/vegetables.jpg';
+import lentilsImg from '../Assets/Lentils.jpg'; // Import the Lentils image
 
 const Home = () => {
   return (
@@ -41,6 +46,51 @@ const Home = () => {
           <FaHeadset className="feature-icon" />
           <h3>SUPPORT</h3>
           <p>24/7 SUPPORT</p>
+        </div>
+      </div>
+
+      <div className="produce-container">
+        <div className="produce-header">
+          <h2 className="produce-title">Vegetables</h2>
+          <p className="produce-subtitle">Protect the health of every home</p>
+          <button className="produce-shop-now-btn">Shop now</button>
+        </div>
+        <div className="produce-grid">
+          <div className="produce-item fruits">
+            <img src={fruitsImg} alt="Fruits" className="produce-image" />
+            <div className="produce-label">
+              <FaAppleAlt />
+              <span>Fruits</span>
+            </div>
+          </div>
+          <div className="produce-item juices">
+            <img src={juicesImg} alt="Juices" className="produce-image" />
+            <div className="produce-label">
+              <FaLeaf />
+              <span>Juices</span>
+            </div>
+          </div>
+          <div className="produce-item vegetables">
+            <img src={vegetablesImg} alt="Vegetables" className="produce-image" />
+            <div className="produce-label">
+              <FaCarrot />
+              <span>Vegetables</span>
+            </div>
+          </div>
+          <div className="produce-item lentils">
+            <img src={lentilsImg} alt="Lentils" className="produce-image" />
+            <div className="produce-label">
+              <FaUtensils />
+              <span>Lentils</span>
+            </div>
+          </div>
+          <div className="produce-item dried">
+            <img src={driedImg} alt="Dried" className="produce-image" />
+            <div className="produce-label">
+              <FaSeedling />
+              <span>Dried</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
