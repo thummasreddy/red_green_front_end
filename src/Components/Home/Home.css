@@ -61,14 +61,14 @@
 /* Style for the "Shop Now" button */
 .home-shop-now-btn {
   background-color: #7ab93f;
-  color: black;
+  color:white;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  margin-left: 900px; /* Add margin to the left */
-  margin-top: 100px; /* Move the text up */
+  margin-left: 1100px; 
+  margin-top: 100px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
