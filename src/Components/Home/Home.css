@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 0px;
-  background-color: #eff7ed; /* Darkened background color */
+  background-color: #f8fcf7; /* Darkened background color */
   
   
 }
@@ -96,7 +96,7 @@
     font-size: 1.5rem; /* Font size for the text */
     font-weight: bold; /* Bold text */
     border-radius: 5px; /* Rounded corners */
-    margin-top: 20px; /* Margin at the top to separate from other content */
+    margin-top: -40px; /* Margin at the top to separate from other content */
   
  
 }
@@ -109,7 +109,7 @@
   align-items: center;
   padding: 20px;
   margin-top: 30px;
-  background-color: #eff7ed;
+  background-color: #f8fcf7;
 }
 
 .feature {
@@ -158,7 +158,7 @@
 /* Produce container styling */
 .produce-container {
   padding: 50px;
-  background-color: #eff7ed; /* White background for better contrast */
+  background-color: #f8fcf7; /* White background for better contrast */
   text-align: center;
   margin-top: 30px; /* Space above the produce section */
   border-radius: 10px; /* Rounded corners */
@@ -295,7 +295,7 @@
   }
 }
 
-* Hover effect for labels */
+/* Hover effect for labels */
 .produce-item:hover .produce-label {
   background-color: rgba(0, 100, 0, 0.9);
 }
@@ -365,20 +365,6 @@
   background-color: rgba(184, 134, 11, 0.9); /* Darker golden on hover */
 }
 
-/* Home.css */
-
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
 
 /* Deal of the Day Styles */
 .deal-container {
@@ -386,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 75vh;
   overflow: hidden;
 }
 
