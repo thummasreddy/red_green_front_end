@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaTruck, FaLeaf, FaMedal, FaHeadset, FaAppleAlt, FaCarrot, FaSeedling, FaUtensils } from 'react-icons/fa';
 import './Home.css'; // Import the CSS file
 import landingPageImage from '../Assets/Landing_Page.png'; // Import the image
@@ -8,8 +8,47 @@ import juicesImg from '../Assets/juices.jpg';
 import driedImg from '../Assets/dried-fruits.jpg';
 import vegetablesImg from '../Assets/vegetables.jpg';
 import lentilsImg from '../Assets/Lentils.jpg'; // Import the Lentils image
+import dealimage from '../Assets/dealimage.jpg'; // Import the deal image
 
 const Home = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 365,
+    hours: 7,
+    minutes: 3,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prevTime => {
+        const newTime = { ...prevTime };
+
+        if (newTime.seconds > 0) {
+          newTime.seconds--;
+        } else {
+          newTime.seconds = 59;
+          if (newTime.minutes > 0) {
+            newTime.minutes--;
+          } else {
+            newTime.minutes = 59;
+            if (newTime.hours > 0) {
+              newTime.hours--;
+            } else {
+              newTime.hours = 23;
+              if (newTime.days > 0) {
+                newTime.days--;
+              }
+            }
+          }
+        }
+
+        return newTime;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div>
       <div className='home-container'>
@@ -27,33 +66,32 @@ const Home = () => {
       </div>
 
       <div className="features-container">
-      <div className="feature">
-        <FaTruck className="feature-icon" />
-        <h3>FREE SHIPPING</h3>
-        <p>ON ORDER OVER $100</p>
+        <div className="feature">
+          <FaTruck className="feature-icon" />
+          <h3>FREE SHIPPING</h3>
+          <p>ON ORDER OVER $100</p>
+        </div>
+        <div className="feature">
+          <FaLeaf className="feature-icon" />
+          <h3>ALWAYS FRESH</h3>
+          <p>PRODUCT WELL PACKAGE</p>
+        </div>
+        <div className="feature">
+          <FaMedal className="feature-icon" />
+          <h3>SUPERIOR QUALITY</h3>
+          <p>QUALITY PRODUCTS</p>
+        </div>
+        <div className="feature">
+          <FaHeadset className="feature-icon" />
+          <h3>SUPPORT</h3>
+          <p>24/7 SUPPORT</p>
+        </div>
       </div>
-      <div className="feature">
-        <FaLeaf className="feature-icon" />
-        <h3>ALWAYS FRESH</h3>
-        <p>PRODUCT WELL PACKAGE</p>
-      </div>
-      <div className="feature">
-        <FaMedal className="feature-icon" />
-        <h3>SUPERIOR QUALITY</h3>
-        <p>QUALITY PRODUCTS</p>
-      </div>
-      <div className="feature">
-        <FaHeadset className="feature-icon" />
-        <h3>SUPPORT</h3>
-        <p>24/7 SUPPORT</p>
-      </div>
-    </div>
 
       <div className="produce-container">
         <div className="produce-header">
           <h2 className="produce-title">Healthy Harvest</h2>
           <p className="produce-subtitle">Protect the health of every home</p>
-          
         </div>
         <div className="produce-grid">
           <div className="produce-item fruits">
@@ -89,6 +127,37 @@ const Home = () => {
             <div className="produce-label">
               <FaSeedling />
               <span>Dried</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="deal-container">
+        <div className="deal-image">
+          <img src={dealimage} alt="Fresh Vegetables" />
+        </div>
+        <div className="deal-content">
+          <span className="deal-subtitle">Best Price For You</span>
+          <h1 className="deal-title">Deal of the day</h1>
+          <p className="deal-description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          <h2 className="deal-product">Spinach</h2>
+          <p className="deal-price">$10 <span className="deal-discount">now $5 only</span></p>
+          <div className="deal-timer">
+            <div className="deal-timer-unit">
+              <span id="days" className="deal-timer-value">{timeLeft.days}</span>
+              <span className="deal-timer-label">DAYS</span>
+            </div>
+            <div className="deal-timer-unit">
+              <span id="hours" className="deal-timer-value">{timeLeft.hours}</span>
+              <span className="deal-timer-label">HOURS</span>
+            </div>
+            <div className="deal-timer-unit">
+              <span id="minutes" className="deal-timer-value">{timeLeft.minutes}</span>
+              <span className="deal-timer-label">MINUTES</span>
+            </div>
+            <div className="deal-timer-unit">
+              <span id="seconds" className="deal-timer-value">{timeLeft.seconds}</span>
+              <span className="deal-timer-label">SECONDS</span>
             </div>
           </div>
         </div>
