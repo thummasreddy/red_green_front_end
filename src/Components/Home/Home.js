@@ -226,7 +226,7 @@ const Home = () => {
             Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
             <h4 className="testimonial-name">Aaradhya</h4>
-            <p className="testimonial-role">WEB DEVELOPER</p>
+            <p className="testimonial-role"></p>
           </div>
         </div>
 
