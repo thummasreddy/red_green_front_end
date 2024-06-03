@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 200px;
+  
   background-color: rgba(214, 218, 200, 0.7); /* Darkened background color */
   
 }
@@ -38,9 +38,8 @@
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 600px; /* Add margin to the left */
-  margin-top: -60px;
+    margin-left: 600px; 
+  margin-top: 50px;
 }
 
 .home-title-large {
@@ -48,16 +47,15 @@
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
-  margin-bottom: 70px;
-  margin-left: 200px; /* Add margin to the left */
+   margin-left: 200px; /* Add margin to the left */
 }
 
 .home-text p {
   font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  margin-left: 700px; /* Add margin to the left */
-  margin-top: -300px; /* Move the text up */
+  line-height: 2.5;
+  margin-left: 850px;
+  margin-right:50px;
+  margin-top: -300px; 
 }
 
 /* Style for the "Shop Now" button */
@@ -144,57 +142,64 @@
   color: #7ab93f; /* Change text color on hover */
 }
 
-/* Common styles for produce container */
+/* Produce container styling */
 .produce-container {
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 50px;
+  background-color: #fff; /* White background for better contrast */
   text-align: center;
+  margin-top: 30px; /* Space above the produce section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Styles for the header */
 .produce-header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .produce-title {
-  font-size: 2em;
+  font-size: 32px;
+  font-weight: bold;
+  color: #3d6025;
   margin-bottom: 10px;
 }
 
 .produce-subtitle {
-  font-size: 1.2em;
+  font-size: 18px;
+  color: #6a8a27;
   margin-bottom: 20px;
 }
 
 .produce-shop-now-btn {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #7ab93f;
   color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
   border: none;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .produce-shop-now-btn:hover {
-  background-color: #45a049;
+  background-color: #5a992b;
+  color: white;
+  transform: scale(1.05);
 }
 
-/* Grid styles */
 .produce-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  justify-items: center;
-  grid-template-areas:
-    "fruits vegetables lentils"
-    "juices vegetables dried";
 }
 
-/* Common styles for produce items */
 .produce-item {
-  position: relative;
-  width: 300px;
+  flex: 1 1 calc(20% - 20px);
+  max-width: calc(20% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -203,33 +208,81 @@
   transform: scale(1.05);
 }
 
-/* Common styles for images */
 .produce-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Common styles for labels */
 .produce-label {
-  position: absolute;
-  bottom: 10px;
-  left: 100px;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  border-radius: 5px;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s ease;
+  justify-content: center;
+  padding: 10px;
+  background-color: #7ab93f;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.produce-label span {
-  margin-left: 5px;
+.produce-label svg {
+  margin-right: 8px;
 }
 
-/* Hover effect for labels */
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .home-container {
+    padding: 40px;
+  }
+
+  .home-title-small,
+  .home-title-large,
+  .home-text p,
+  .home-shop-now-btn {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .home-image {
+    float: none;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 30px;
+  }
+
+  .home-title-small {
+    font-size: 20px;
+  }
+
+  .home-title-large {
+    font-size: 24px;
+  }
+
+  .home-text p {
+    font-size: 16px;
+  }
+
+  .home-shop-now-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .produce-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produce-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+* Hover effect for labels */
 .produce-item:hover .produce-label {
   background-color: rgba(0, 100, 0, 0.9);
 }
@@ -276,22 +329,10 @@
 /* Specific styles for Vegetables */
 .produce-item.vegetables {
   grid-area: vegetables;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.produce-item.vegetables .produce-image {
-  display: block;
-  margin: auto;
-  
 }
 
 .produce-item.vegetables .produce-label {
   background-color: rgba(34, 139, 34, 0.7); /* Forest green color for Vegetables */
-  bottom: 32%;
-  left: 50%;
-  transform: translate(-50%, 50%); /* Centering the text */
 }
 
 .produce-item.vegetables:hover .produce-label {

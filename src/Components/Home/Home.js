@@ -6,7 +6,7 @@ import landingPageBackground from '../Assets/Landing_Page_bg.png';
 import fruitsImg from '../Assets/fruits.jpg'; // Update with your actual image paths
 import juicesImg from '../Assets/juices.jpg';
 import driedImg from '../Assets/dried-fruits.jpg';
-import vegetablesImg from '../Assets/vegetables.png';
+import vegetablesImg from '../Assets/vegetables.jpg';
 import lentilsImg from '../Assets/Lentils.jpg'; // Import the Lentils image
 
 const Home = () => {
@@ -51,7 +51,7 @@ const Home = () => {
 
       <div className="produce-container">
         <div className="produce-header">
-          <h2 className="produce-title">Vegetables</h2>
+          <h2 className="produce-title">Healthy Harvest</h2>
           <p className="produce-subtitle">Protect the health of every home</p>
           
         </div>
