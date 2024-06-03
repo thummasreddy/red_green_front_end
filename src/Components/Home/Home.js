@@ -27,27 +27,27 @@ const Home = () => {
       </div>
 
       <div className="features-container">
-        <div className="feature">
-          <FaTruck className="feature-icon" />
-          <h3>FREE SHIPPING</h3>
-          <p>ON ORDER OVER $100</p>
-        </div>
-        <div className="feature">
-          <FaLeaf className="feature-icon" />
-          <h3>ALWAYS FRESH</h3>
-          <p>PRODUCT WELL PACKAGE</p>
-        </div>
-        <div className="feature">
-          <FaMedal className="feature-icon" />
-          <h3>SUPERIOR QUALITY</h3>
-          <p>QUALITY PRODUCTS</p>
-        </div>
-        <div className="feature">
-          <FaHeadset className="feature-icon" />
-          <h3>SUPPORT</h3>
-          <p>24/7 SUPPORT</p>
-        </div>
+      <div className="feature">
+        <FaTruck className="feature-icon" />
+        <h3>FREE SHIPPING</h3>
+        <p>ON ORDER OVER $100</p>
       </div>
+      <div className="feature">
+        <FaLeaf className="feature-icon" />
+        <h3>ALWAYS FRESH</h3>
+        <p>PRODUCT WELL PACKAGE</p>
+      </div>
+      <div className="feature">
+        <FaMedal className="feature-icon" />
+        <h3>SUPERIOR QUALITY</h3>
+        <p>QUALITY PRODUCTS</p>
+      </div>
+      <div className="feature">
+        <FaHeadset className="feature-icon" />
+        <h3>SUPPORT</h3>
+        <p>24/7 SUPPORT</p>
+      </div>
+    </div>
 
       <div className="produce-container">
         <div className="produce-header">

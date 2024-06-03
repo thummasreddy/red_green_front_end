@@ -92,12 +92,14 @@
   color: #D24545;
 }
 
+/* App.css */
+/* Style for the features */
 .features-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #eff7ed;
 }
 
 .feature {
@@ -110,18 +112,18 @@
 
 .feature:hover {
   transform: translateY(-10px); /* Move the feature up on hover */
-  background-color: #ffebeb; /* Change background color on hover */
+  background-color: #7ab93f; /* Change background color on hover */
 }
 
 .feature-icon {
   font-size: 3rem;
   margin-bottom: 10px;
-  color: #ff7e5f; /* Adjust the color to match your design */
+  color: #e74c3c; /* Adjust the color to match your design */
   transition: color 0.3s ease; /* Add transition for smooth hover effect */
 }
 
-.feature-icon:hover {
-  color: #7ab93f; /* Change color on hover */
+.feature:hover .feature-icon {
+  color: white; /* Change icon color on hover */
 }
 
 .feature h3 {
@@ -139,15 +141,16 @@
 
 .feature:hover h3,
 .feature:hover p {
-  color: #7ab93f; /* Change text color on hover */
+  color: white; /* Change text color on hover */
 }
+
 
 /* Produce container styling */
 .produce-container {
   padding: 50px;
-  background-color: #fff; /* White background for better contrast */
+  background-color: #eff7ed; /* White background for better contrast */
   text-align: center;
-  margin-top: 30px; /* Space above the produce section */
+  margin-top: 10px; /* Space above the produce section */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
