@@ -200,33 +200,33 @@ const Home = () => {
         <h3 className="testimonial-heading">Testimony</h3>
         <h2 className="testimonial-title">Our satisfied customer says</h2>
         <p className="testimonial-description">
-          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in
+        Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
         </p>
 
         <div className="testimonial-slider">
           <div className="testimonial-slide active">
             <FaUserAlt className="testimonial-icon" />
             <p className="testimonial-quote">
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
-            <h4 className="testimonial-name">Garreth Smith</h4>
-            <p className="testimonial-role">WEB DEVELOPER</p>
+            <h4 className="testimonial-name">Mary</h4>
+            <p className="testimonial-role">Home Maker</p>
           </div>
           <div className="testimonial-slide">
             <FaUserTie className="testimonial-icon" />
             <p className="testimonial-quote">
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
-            <h4 className="testimonial-name">Garreth Smith</h4>
-            <p className="testimonial-role">SYSTEM ANALYST</p>
+            <h4 className="testimonial-name">Reddy</h4>
+            <p className="testimonial-role">Restaurant Owner</p>
           </div>
           <div className="testimonial-slide">
             <FaUserSecret className="testimonial-icon" />
             <p className="testimonial-quote">
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
-            <h4 className="testimonial-name">Garreth Smith</h4>
-            <p className="testimonial-role">MARKETING MANAGER</p>
+            <h4 className="testimonial-name">Aaradhya</h4>
+            <p className="testimonial-role">WEB DEVELOPER</p>
           </div>
         </div>
 
@@ -249,7 +249,7 @@ const Home = () => {
     <div className="footer-content">
         <div className="footer-section about">
             <h3>The Green Grocer</h3>
-            <p>In the bustling heart of Hyderabad, India, amidst the vibrant energy and rich culture, lies a haven for fresh, local produce. Here, you'll find a bounty of nature's finest offerings, delivered straight from the farms that surround this dynamic city..</p>
+            <p>In the bustling heart of Hyderabad, India, amidst the vibrant energy and rich culture, lies a haven for fresh, local produce. Here, you'll find a bounty of nature's finest offerings, delivered straight from the farms that surround this dynamic city.</p>
             <div className="socials">
                 <a href="#"><FaTwitterSquare /></a>
                 <a href="#"><FaFacebookSquare /></a>
