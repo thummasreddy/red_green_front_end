@@ -1,86 +1,115 @@
 .products-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .products-header {
-    background-image: url('../Assets//Products/Banners/Shop-fruits-vegetables.jpg'); /* Replace with actual image path */
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-  }
-  
-  .products-header h2 {
-    margin: 0;
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .products-categories {
-    margin: 20px 0;
-  }
-  
-  .products-category-btn {
-    background-color: #a1d37d;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .products-category-btn.active {
-    background-color: #5c8a45;
-  }
-  
-  .products-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .product-card {
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    position: relative;
-  }
-  
-  .product-discount {
-    background-color: #5c8a45;
-    color: white;
-    padding: 5px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .product-name {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .product-price-old {
-    text-decoration: line-through;
-    color: #888;
-  }
-  
-  .product-price-new {
-    color: #5c8a45;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .product-price {
-    color: #5c8a45;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.products-header {
+  background-image: url('../Assets/Products/Banners/Shop-fruits-vegetables.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+}
+
+.products-header h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.products-categories {
+  margin: 20px 0;
+}
+
+.products-category-btn {
+  background-color: #a1d37d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.products-category-btn.active {
+  background-color: #5c8a45;
+}
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-discount {
+  background-color: #5c8a45;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-price-old {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.product-price-new {
+  color: #5c8a45;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-price {
+  color: #5c8a45;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-hover {
+  opacity: 1;
+}
+
+.product-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #a1d37d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 270px;
+}
