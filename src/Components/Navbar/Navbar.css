@@ -27,7 +27,7 @@ ul, li {
 }
 
 .navbar-item {
-  color: #6cb336;
+  color: #fff;
   font-size: 18px;
   text-transform: uppercase;
   cursor: pointer;
@@ -196,6 +196,6 @@ ul, li {
   }
 
   .navbar-bar {
-    background-color: #373B44; /* Adjust to match your theme */
+    background-color: white; /* Adjust to match your theme */
   }
 }

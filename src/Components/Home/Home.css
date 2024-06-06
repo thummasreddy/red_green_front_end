@@ -1,83 +1,85 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Style for the entire home container */
+/* Home container */
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 0px;
-  background-color: #f8fcf7; /* Darkened background color */
-  
-  
+  background-color: #f8fcf7;
+  padding: 20px;
 }
 
-/* Style for the landing page image */
+/* Landing page image */
 .home-image {
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
   margin-bottom: 20px;
-  float: left;
-  margin-right: 750px;
-  margin-top: -0px;
-  
+  float: none;
+  margin: 0 auto;
 }
 
-/* Style for the background image */
+/* Background image */
 .home-background-image {
   position: fixed;
-  top: 10;
-  left: 10;
-  width: 130vw; /* Cover entire width of the viewport */
-  height: 130vh; /* Cover entire height of the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
-  opacity: 0.5; /* Set the opacity */
+  opacity: 0.5;
 }
 
-
-/* Style for the text content */
-.home-title-small {
-  font-size: 24px;
+/* Text content */
+.home-title-small, .home-title-large {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: bold;
-    margin-left: 600px; 
-  margin-top: 70px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-title-small {
+  font-size: 24px;
 }
 
 .home-title-large {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  margin-top: 50px;
-   margin-left: 200px; /* Add margin to the left */
+  font-size: 28px;
+}
+
+.home-text {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .home-text p {
   font-size: 16px;
-  line-height: 2.5;
-  margin-left: 850px;
-  margin-right:50px;
-  margin-top: -450px; 
+  line-height: 1.5;
 }
 
-/* Style for the "Shop Now" button */
+/* "Shop Now" button */
 .home-shop-now-btn {
   background-color: #7ab93f;
-  color:white;
+  color: white;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  margin-left: 1100px; 
-  margin-top: 100px; 
+  margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .home-shop-now-btn:hover {
-  background-color: #D24545;
+  background-color: #d24545;
   color: white;
 }
 
