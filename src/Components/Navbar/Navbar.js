@@ -65,7 +65,7 @@ const Navbar = () => {
         <form action="/search" method="get">
           <label htmlFor="search" className="navbar-search-label"></label>
           <input 
-                  value={searchQuery}
+            value={searchQuery}
             onChange={handleSearchChange}
             autoComplete="off"
             className="navbar-search-input"
