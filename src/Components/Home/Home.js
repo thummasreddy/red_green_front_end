@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaTruck, FaLeaf, FaMedal, FaHeadset, FaAppleAlt, FaCarrot, FaSeedling, FaUtensils, FaUserAlt, FaUserTie, FaUserSecret, FaTwitterSquare, FaFacebookSquare, FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import './Home.css'; // Import the CSS file
+import { Link } from 'react-router-dom'; 
 import landingPageImage from '../Assets/Landing_Page.png'; // Import the image
 import landingPageBackground from '../Assets/Landing_Page_bg.png';
 import fruitsImg from '../Assets/fruits.jpg'; // Update with your actual image paths
