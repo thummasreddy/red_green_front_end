@@ -386,15 +386,14 @@ body, html {
 
 .deal-content {
   position: absolute;
-  right: 0;
   top: 50%;
-  margin-right: 200px;
+  right: 0;
   transform: translateY(-50%);
-  
-  padding: 20px;
+  padding: 50px;
   max-width: 50%;
-  text-align: right;
- 
+  text-align: left;
+  background: rgba(255, 255, 255, 0.342);
+  border-radius: 10px;
 }
 
 .deal-subtitle {
@@ -434,7 +433,7 @@ body, html {
 
 .deal-timer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .deal-timer-unit {
@@ -451,6 +450,101 @@ body, html {
   font-size: 0.9rem;
   color: #666;
 }
+
+@media (max-width: 1200px) {
+  .deal-content {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .deal-content {
+    padding: 15px;
+  }
+
+  .deal-title {
+    font-size: 2rem;
+  }
+
+  .deal-product {
+    font-size: 1.5rem;
+  }
+
+  .deal-price {
+    font-size: 1.2rem;
+  }
+
+  .deal-timer-value {
+    font-size: 1.2rem;
+  }
+
+  .deal-timer-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .deal-container {
+    height: auto;
+  }
+
+  .deal-content {
+    padding: 15px;
+    max-width: 80%;
+  }
+
+  .deal-title {
+    font-size: 1.8rem;
+  }
+
+  .deal-product {
+    font-size: 1.2rem;
+  }
+
+  .deal-price {
+    font-size: 1rem;
+  }
+
+  .deal-timer-value {
+    font-size: 1.2rem;
+  }
+
+  .deal-timer-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .deal-content {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .deal-title {
+    font-size: 1.5rem;
+  }
+
+  .deal-description {
+    font-size: 0.9rem;
+  }
+
+  .deal-product {
+    font-size: 1rem;
+  }
+
+  .deal-price {
+    font-size: 0.9rem;
+  }
+
+  .deal-timer-value {
+    font-size: 1rem;
+  }
+
+  .deal-timer-label {
+    font-size: 0.7rem;
+  }
+}
+
 
 /* Testimonial section styles */
 .testimonial-section {

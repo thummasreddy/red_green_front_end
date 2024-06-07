@@ -4,7 +4,7 @@
 }
 
 .products-header {
-  background-image: url('../Assets/Products/Banners/Shop-fruits-vegetables.jpg'); /* Replace with actual image path */
+  background-image: url('../Assets/Products/Banners/Shop-fruits-vegetables.jpg'); 
   background-size: cover;
   color: white;
   padding: 100px 0;
