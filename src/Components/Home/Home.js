@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { FaTruck, FaLeaf, FaMedal, FaHeadset, FaAppleAlt, FaCarrot, FaSeedling, FaUtensils, FaUserAlt, FaUserTie, FaUserSecret, FaTwitterSquare, FaFacebookSquare, FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaTruck, FaLeaf, FaMedal, FaHeadset, FaAppleAlt, FaCarrot, FaSeedling, FaUtensils, FaUserAlt, FaUserTie, FaUserSecret } from 'react-icons/fa';
 import './Home.css'; // Import the CSS file
-import { Link } from 'react-router-dom'; 
+import Footer from '../Global/Footer'; // Import the Footer component
 import landingPageImage from '../Assets/Landing_Page.png'; // Import the image
 import landingPageBackground from '../Assets/Landing_Page_bg.png';
 import fruitsImg from '../Assets/fruits.jpg'; // Update with your actual image paths
@@ -201,14 +201,14 @@ const Home = () => {
         <h3 className="testimonial-heading">Testimony</h3>
         <h2 className="testimonial-title">Our satisfied customer says</h2>
         <p className="testimonial-description">
-        Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
+          Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
         </p>
 
         <div className="testimonial-slider">
           <div className="testimonial-slide active">
             <FaUserAlt className="testimonial-icon" />
             <p className="testimonial-quote">
-            Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
+              Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
             <h4 className="testimonial-name">Mary</h4>
             <p className="testimonial-role">Home Maker</p>
@@ -216,7 +216,7 @@ const Home = () => {
           <div className="testimonial-slide">
             <FaUserTie className="testimonial-icon" />
             <p className="testimonial-quote">
-            Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
+              Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
             <h4 className="testimonial-name">Reddy</h4>
             <p className="testimonial-role">Restaurant Owner</p>
@@ -224,7 +224,7 @@ const Home = () => {
           <div className="testimonial-slide">
             <FaUserSecret className="testimonial-icon" />
             <p className="testimonial-quote">
-            Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
+              Hyderabad's heart beats with fresh, local produce. Find nature's bounty delivered straight from nearby farms.
             </p>
             <h4 className="testimonial-name">Aaradhya</h4>
             <p className="testimonial-role"></p>
@@ -236,66 +236,11 @@ const Home = () => {
           <span className="dot" onClick={() => currentSlide(1)}></span>
           <span className="dot" onClick={() => currentSlide(2)}></span>
         </div>
-
-        <footer>
-    <div className="newsletter">
-        <h2>Subscribe to our Newsletter</h2>
-        <p>Get e-mail updates about our latest shops and special offers</p>
-        <form>
-            <input type="email" placeholder="Enter email address" />
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
-
-    <div className="footer-content">
-        <div className="footer-section about">
-            <h3>The Green Grocer</h3>
-            <p>In the bustling heart of Hyderabad, India, amidst the vibrant energy and rich culture, lies a haven for fresh, local produce. Here, you'll find a bounty of nature's finest offerings, delivered straight from the farms that surround this dynamic city.</p>
-            <div className="socials">
-                <a href="#"><FaTwitterSquare /></a>
-                <a href="#"><FaFacebookSquare /></a>
-                <a href="#"><FaInstagramSquare /></a>
-            </div>
-        </div>
-
-        <div className="footer-section menu">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-        <div className="footer-section help">
-            <h3>Help</h3>
-            <ul>
-                <li><a href="#">Shipping Information</a></li>
-                <li><a href="#">Returns & Exchange</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </div>
-
-        <div className="footer-section contact">
-            <h3>Have a Question?</h3>
-            <p><FaMapMarkerAlt />Hyderabad, Telangana, India</p>
-            <p><FaPhoneAlt />+91 9999888899</p>
-            <p><FaEnvelope />info@redandgreen.com</p>
-        </div>
-    </div>
-
-    <div className="footer-bottom">
-        <p>© 2024 All rights reserved | This template is made with <span>&hearts;</span> by Red And Green</p>
-    </div>
-</footer>
-
       </div>
-    </div>
 
-    
+      {/* Include the Footer component */}
+      <Footer />
+    </div>
   );
 };
 

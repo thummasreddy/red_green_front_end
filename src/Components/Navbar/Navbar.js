@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
-    setIsMobileMenuOpen(false); // Close mobile menu on item click
+    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -24,70 +24,50 @@ const Navbar = () => {
   };
 
   return (
-    <div className='navbar'>
+    <nav className='navbar'>
       <div className='navbar-logo'>
-        <img src={logo} alt="Logo"/>
+        <img src={logo} alt="Logo" />
       </div>
       <ul className={`navbar-menu ${isMobileMenuOpen ? 'navbar-mobile-menu' : ''}`}>
-        <li 
-          className={`navbar-item ${activeMenu === "home" ? "navbar-active" : ""}`} 
-          onClick={() => handleMenuClick("home")}
-        >
-          <Link to='/'>Home</Link>
-        </li>
-        <li 
-          className={`navbar-item ${activeMenu === "shop" ? "navbar-active" : ""}`} 
-          onClick={() => handleMenuClick("shop")}
-        >
-          <Link to='/shop'>Shop</Link>
-        </li>
-        <li 
-          className={`navbar-item ${activeMenu === "about" ? "navbar-active" : ""}`} 
-          onClick={() => handleMenuClick("about")}
-        >
-          <Link to='/about'>About</Link>
-        </li>
-        <li 
-          className={`navbar-item ${activeMenu === "blog" ? "navbar-active" : ""}`} 
-          onClick={() => handleMenuClick("blog")}
-        >
-          <Link to='/blog'>Blog</Link>
-        </li>
-        <li 
-          className={`navbar-item ${activeMenu === "contact" ? "navbar-active" : ""}`} 
-          onClick={() => handleMenuClick("contact")}
-        >
-          <Link to='/contact'>Contact</Link>
-        </li>
+        {['home', 'shop', 'about', 'blog', 'contact'].map((menu) => (
+          <li
+            key={menu}
+            className={`navbar-item ${activeMenu === menu ? 'navbar-active' : ''}`}
+            onClick={() => handleMenuClick(menu)}
+          >
+            <Link to={`/${menu === 'home' ? '' : menu}`}>{menu.charAt(0).toUpperCase() + menu.slice(1)}</Link>
+          </li>
+        ))}
       </ul>
-
       <div className="navbar-search">
         <form action="/search" method="get">
           <label htmlFor="search" className="navbar-search-label"></label>
-          <input 
+          <input
+            type="text"
+            id="search"
+            name="search"
             value={searchQuery}
             onChange={handleSearchChange}
             autoComplete="off"
             className="navbar-search-input"
+            placeholder="Search..."
           />
           <button type="submit" className="navbar-search-btn">
             <FontAwesomeIcon icon={faSearch} />
           </button>
           <ul id="suggestions" className="navbar-suggestions"></ul>
         </form>
-        
-        <Link to="/login"> {/* Navigate to Login page */}
-          <button className="navbar-btn-login" type="button">Login</button> {/* Login button */}
+        <Link to="/login">
+          <button className="navbar-btn-login" type="button">Login</button>
         </Link>
       </div>
-      
-      <button className="navbar-hamburger" onClick={toggleMobileMenu}>
+      <button className="navbar-hamburger" onClick={toggleMobileMenu} aria-label="Toggle menu">
         <div className="navbar-bar"></div>
         <div className="navbar-bar"></div>
         <div className="navbar-bar"></div>
       </button>
-    </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;
