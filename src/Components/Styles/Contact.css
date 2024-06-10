@@ -1,0 +1,128 @@
+.contact-container-modern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+  }
+  
+  .contact-banner-modern {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .contact-banner-content-modern {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .contact-banner-content-modern p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  
+  .contact-banner-content-modern h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .contact-info-modern {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .contact-info-item-modern {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info-item-modern h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .contact-info-item-modern p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .contact-form-map-modern {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .contact-map-modern {
+    flex: 1;
+    background-color: #e0e0e0;
+    height: 400px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .google-map-modern {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 5px;
+  }
+  
+  .contact-form-modern {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-input-modern, .contact-textarea-modern {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-input-modern:focus, .contact-textarea-modern:focus {
+    border-color: #8bc34a;
+  }
+  
+  .contact-button-modern {
+    padding: 15px;
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-button-modern:hover {
+    background-color: #7cb342;
+  }
+  
