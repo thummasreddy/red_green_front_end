@@ -15,19 +15,19 @@ const Contact = () => {
       <div className="contact-info-modern">
         <div className="contact-info-item-modern">
           <h4>Address:</h4>
-          <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+          <p>Bala Nilayam, Hyderabad, 400058</p>
         </div>
         <div className="contact-info-item-modern">
           <h4>Phone:</h4>
-          <p>+ 1235 2355 98</p>
+          <p>+91 9876543210</p>
         </div>
         <div className="contact-info-item-modern">
           <h4>Email:</h4>
-          <p>info@yoursite.com</p>
+          <p>info@rg.com</p>
         </div>
         <div className="contact-info-item-modern">
           <h4>Website:</h4>
-          <p>yoursite.com</p>
+          <p>rg.com</p>
         </div>
       </div>
       <div className="contact-form-map-modern">
@@ -35,7 +35,7 @@ const Contact = () => {
           <iframe
             title="Google Maps"
             className="google-map-modern"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7845062146216!2d-73.99332488428626!3d40.74296287932844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18b32717%3A0x1a045a2c1a8c5e7!2s198%20W%2021st%20St%2C%20New%20York%2C%20NY%2010011%2C%20USA!5e0!3m2!1sen!2sin!4v1614628843646!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0322148679047!2d78.37638671431962!3d17.4873409880178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94236c94b7a1%3A0xc8a3f6f1b1a9a5bb!2sHyderabad%2C%20Telangana%20500048%2C%20India!5e0!3m2!1sen!2sin!4v1614628843646!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"
           ></iframe>
