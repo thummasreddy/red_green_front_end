@@ -42,10 +42,11 @@
     justify-content: space-around;
     width: 100%;
     margin: 20px 0;
+    color: #8bc34a;
   }
   
   .contact-info-item-modern {
-    background-color: #f0f0f0;
+    background-color: #f9fff2;
     padding: 20px;
     text-align: center;
     flex: 1;
@@ -57,7 +58,7 @@
   .contact-info-item-modern h4 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #333;
+    color: #333333;
   }
   
   .contact-info-item-modern p {
