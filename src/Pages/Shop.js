@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Components/Styles/Shop.css';
+import Footer from '../Components/Global/Footer';
 import { FaBars, FaShoppingCart, FaHeart } from 'react-icons/fa';
 import bellPepperImg from '../Components/Assets/Products/bell-pepper.jpg';
 import strawberryImg from '../Components/Assets/Products/strawberry.jpg';
@@ -63,6 +64,7 @@ const Shop = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
