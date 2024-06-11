@@ -3,7 +3,7 @@ import './Navbar.css';
 import logo from '../Assets/r_g_logo_01.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("shop");
@@ -55,8 +55,11 @@ const Navbar = () => {
           <button type="submit" className="navbar-search-btn">
             <FontAwesomeIcon icon={faSearch} />
           </button>
-          <ul id="suggestions" className="navbar-suggestions"></ul>
         </form>
+        <div className="navbar-cart">
+          <FontAwesomeIcon icon={faShoppingCart} />
+          <span>[0]</span>
+        </div>
         <Link to="/login">
           <button className="navbar-btn-login" type="button">Login</button>
         </Link>
