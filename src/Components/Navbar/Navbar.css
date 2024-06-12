@@ -93,7 +93,13 @@ ul, li {
   align-items: center;
   margin-left: 10px;
   font-size: 1.2rem;
-  color: #e74c3c;
+  color: #7ab93f;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-cart:hover {
+  color: white;
+  transform: scale(1.1);
 }
 
 .navbar-cart span {
